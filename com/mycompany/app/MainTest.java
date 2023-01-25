@@ -20,7 +20,7 @@ public class MainTest {
       $(By.id("loginPassword")).setValue("test");
       $(new ByText("Вход")).click();
    }
-   public void fillNewUserandEnter(){
+   public void fillNewUser(){
       $(By.id("dataEmail")).setValue("Main@protei.ru");
       $(By.id("dataName")).setValue("Protei");
 
@@ -32,7 +32,7 @@ public class MainTest {
        mainPage.openSite(URL);
        fillAutandEnter();
        $(By.id("inputsPage")).shouldBe(Condition.appear);
-       fillNewUserandEnter();
+       fillNewUser();
        mainPage.setDataM();
        checkAdd();
        mainPage.setDataFem();
