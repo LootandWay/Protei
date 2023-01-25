@@ -10,10 +10,6 @@ import static com.codeborne.selenide.Selenide.$x;
 
 
 public class MainPage {
-
-
-
-    //Открываем сайт
     public void openSite(String URL){
         Selenide.open(URL);
     }
@@ -26,19 +22,7 @@ public class MainPage {
     public void checkCondition(){
         $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
     }
-    //Вводим данные в формы
-    public void fillAutandEnter(){
-        $(By.id("loginEmail")).setValue("test@protei.ru");
-        $(By.id("loginPassword")).setValue("test");
-        $(new ByText("Вход")).click();
 
-    }
-    public void fillNewUserandEnter(){
-        $(By.id("dataEmail")).setValue("Main@protei.ru");
-        $(By.id("dataName")).setValue("Protei");
-
-    }
-    //Выполняем добавление всех форм
     public void addUsers(){
         clickAdd();
         checkCondition();
@@ -88,14 +72,12 @@ public class MainPage {
         checkCondition();
         clickOk();
     }
-    //Выбираем мужской пол
     public void setDataM(){
 
         $x("//select[@id='dataGender']").selectOption("Мужской");
         addUsers();
 
     }
-    //Выбираем женский пол
     public void setDataFem(){
         $x("//select[@id='dataGender']").selectOption("Женский");
         addUsers();
