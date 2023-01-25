@@ -27,13 +27,13 @@ public class MainPage {
         $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
     }
     //Вводим данные в формы
-    public void filAutandEnter(){
+    public void fillAutandEnter(){
         $(By.id("loginEmail")).setValue("test@protei.ru");
         $(By.id("loginPassword")).setValue("test");
         $(new ByText("Вход")).click();
 
     }
-    public void filNewUserandEnter(){
+    public void fillNewUserandEnter(){
         $(By.id("dataEmail")).setValue("Main@protei.ru");
         $(By.id("dataName")).setValue("Protei");
 

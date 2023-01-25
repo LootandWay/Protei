@@ -19,9 +19,9 @@ public class MainTest {
     public void checkInAndAddUsers() {
        MainPage mainPage= new MainPage();
        mainPage.openSite(URL);
-       mainPage.filAutandEnter();
+       mainPage.fillAutandEnter();
        $(By.id("inputsPage")).shouldBe(Condition.appear);
-       mainPage.filNewUserandEnter();
+       mainPage.fillNewUserandEnter();
        mainPage.setDataM();
        checkAdd();
        mainPage.setDataFem();
