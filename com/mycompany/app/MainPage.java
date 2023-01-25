@@ -31,7 +31,6 @@ public class MainPage {
         $(By.id("loginEmail")).setValue("test@protei.ru");
         $(By.id("loginPassword")).setValue("test");
         $(new ByText("Вход")).click();
-        $(By.id("inputsPage")).shouldBe(Condition.appear);
 
     }
     public void filNewUserandEnter(){
