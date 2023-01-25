@@ -11,6 +11,9 @@ public class MainTest {
 
    //Вводим расположение сайта
    private final static String URL = "file:///C:/Users/Fireshot/Downloads/qa-test%20(1).html";
+   public void checkAdd(){
+      $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
+   }
 
    @Test
     public void checkInAndAddUsers() {
@@ -20,8 +23,8 @@ public class MainTest {
        $(By.id("inputsPage")).shouldBe(Condition.appear);
        mainPage.filNewUserandEnter();
        mainPage.setDataM();
-       $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
+       checkAdd();
        mainPage.setDataFem();
-       $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
+       checkAdd();
    }
 }
