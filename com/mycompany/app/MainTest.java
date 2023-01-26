@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class MainTest {
 
-   //Вводим расположение сайта
    private final static String URL = "file:///C:/Users/Fireshot/Downloads/qa-test%20(1).html";
    public void checkAdd(){
       $(".uk-modal-content").shouldHave(Condition.text("Данные добавлены."));
